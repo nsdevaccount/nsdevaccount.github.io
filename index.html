@@ -1,6 +1,6 @@
 <style type="text/css" media="screen">
   body {
-    font: normal 12px Verdana, Arial, sans-serif;
+    font: normal 14px Verdana, Arial, sans-serif;
     background-color: #272626;
     color: white;
   }
@@ -21,57 +21,85 @@
 
   <h2>Table of contents</h2>
   <ul>
-    <li>Overview</li>
-    <li>Trading strategy editor</li>
-    <li>Simulator for back testing</li>
-    <li>Live view and signals</li>
-    <li>Discord and Telegram integration</li>
-    <li>Product variations</li>
-    <li>Nodestrong as a community frontend</li>
-    <li>Nodestrong as a signal provider</li>
-    <li>Monetization</li>
+    <li><a href="#context">Context</a></li>
+    <li><a href="#tradingstrategyeditor">Trading strategy editor</a></li>
+    <li><a href="#backtester">Back testing</a></li>
+    <li><a href="#liveview">Live view and signals</a></li>
+    <li><a href="#discordtelegram">Discord and Telegram integration</a></li>
+    <li><a href="#coreideas">Core ideas</a></li>
+    <li><a href="#communityfrontend">Nodestrong as a community frontend</a></li>
+    <li><a href="#signalprovider">Nodestrong as a signal provider</a></li>
+    <li><a href="#monetization">Monetization</a></li>
   </ul>
   
-  <h3>Summary</h3>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <h3><a name="context">Context</a></h3>
+  <p>
+  Trading in the defi space is highly competitive and it's essential to have an edge over competitors. With the relatively low number of market participants,
+  any early knowledge will quickly diminish its value as more participants becomes aware. There is the dilemma where any commercial trading bot or
+  strategy raises the question - if it's any good why did the creators not keep it for themselves?
+  <br><br>
 
-  <h3>Trading strategy editor</h3>
-  <p>Nodestrong is a crypto defi analytics and trading strategy platform with which it is possible to create and backtest trading strategies.
-  The trading strategy is formed by combining on-chain conditions into a sequence of "if then else" statements, forming the algorithm that defines when a token should be bought.
+  Nodestrong is a defi analytics and trading strategy platform that intends to ease the creation of fully custom trading strategies. The strategy
+  creator does not need any programming skills and has the tools to create a personal algorithm through a drag/drop editor. In order to test
+  the strategy there is the possibility to run it over past data to evaluate its performance.
+
+  Community is at the heart of Nodestrong, and there is full flexibility to collaborate and share trading strategies, or keep them secret and private if so wished.
+</p>
+<br>
+
+  <h3><a name="tradingstrategyeditor">Trading strategy editor</a></h3>
+  <p>The trading strategy is created by combining on-chain conditions into a sequence of "if then else" statements, that defines when a token should be bought.
   There is a library of around 25 different conditions, and the user drag/drops them in a web-based editor to form a complete strategy.</p>
   
   <div>
-  <img width="300px" src="img/basicstrategy.jpg">
-  <p><i>Example of a simple trading strategy.</i></p>
+  <img width="400px" src="img/basicstrategy.jpg">
+  <p><i>Example of a simple trading strategy</i></p>
   </div><br>
   
-  <h3>Simulator for back testing</h3>
+  <h3><a name="backtester">Simulator for back testing</a></h3>
   <p>The platform provides a backtester that runs the trading strategy on historical data. Once the backtest has completed,
   there is detailed information to know which tokens would have triggered, what was the entry value and what was the max value after the trigger.
-  Data such as number of swaps and liquidity is visible at a block granularity. Charts with the trigger point highlighted, and actual vs expected values in all the trading strategy conditions
-  are visualisation helps to understand what happened throughout the backtest.</p>
+  Data such as number of swaps and liquidity is visible at a block level granularity. Charts with the trigger point highlighted, and actual vs expected values in all the trading strategy conditions
+  are visualisation helpers to understand what happened throughout the backtest.</p>
   
   <div>
     <img width="600px" src="img/simulation_result_overview.jpg">
     <p><i>The backtester contains detailed information on how well a trading strategy would have performed in the past</i></p>
   </div><br>
   
-  <h3>Live view and signals</h3>
+  <h3><a name="liveview">Live view and signals</a></h3>
   <p>Each trading strategy is executed live at the head of the chain, on all the newly launched tokens and on each block. 
   The live view gives an overview of all the newest launches on Uniswap V2, and provides real time token data updates similar to other livepairs platforms.
   In the live view you can see which tokens have been triggered according to the active trading strategy.</p>
   
   <div>
     <img width="600px" src="img/liveview_overview.jpg">
-    <p><i>The live view ordered on the most recent launches.</i></p>
-    </div><br>
+    <p><i>The live view ordered on the most recent launches</i></p>
+  </div>
+  <br>
   
   
-  <h3>Discord and Telegram integration</h3>
+  <h3><a name="discordtelegram">Discord and Telegram integration</a></h3>
   <p>In order to get access to the tool, a user will have to join a community that has integrated the Nodestrong Discord or Telegram bot. The signals are received
-  in the form of text messages inside the messaging app. Each signal contains basic information such as token name, contract addressa and links to charts. The user
-  will then have to act on the signal and execute a buy if he/she so wishes. Integration with an external trade execution platform is a possibility but not foreseen
-  as a native feature of Nodestrong.</p>
+  in the shape of text messages inside the messaging app. Each signal contains basic information such as token name, contract addressa and links to charts. The user
+  will then have to act on the signal and execute a buy if he/she so wishes. Integration with an external trade execution platform is a possibility and is not foreseen
+  as a native feature of Nodestrong.</p><br>
+
+  <table>
+    <tr>
+      <td>
+        <div>
+          <img width="600px" src="img/discord_signal.jpg">
+        </div>
+      </td>
+      <td>
+        <div>
+          <img width="400px" src="img/telegram_signal.jpg">
+        </div>
+      </td>
+    </tr>
+    <tr><td>Discord signal</td><td>Telegram signal</td></tr>
+  </table><br>
   
   <p>With the nature of crypto trading being "pvp" (player vs player), it can be of interest to keep a trading strategy algorithm restricted. As a user there are many variations
   on how restricted signals and trading strategies can be on the platform.
@@ -83,30 +111,15 @@
   </ul>
   
   Those are some examples and a tier level structure controls which features a community and member will have and with which flexibility.</p>
-  
   <br>
-  
-  <table>
-    <tr>
-      <td>
-        <div>
-          <img width="600px" src="img/discord_signal.jpg">
-        </div>
-      </td>
-      <td>
-        <div>
-          <img width="500px" src="img/telegram_signal.jpg">
-        </div>
-      </td>
-    </tr>
-    <tr><td>Discord signal</td><td>Telegram signal</td></tr>
-  </table>
-  
-  
-  <br><br><br><br><br><br>
-  <h2>Product variations</h2>
+
+  <div>
+    <img width="250px" src="img/adduser_tier.jpg">
+    <p><i>Addition of a new user with tier level selection</i></p>
+  </div>
+  <br><br>
+  <h2><a name="coreideas">Core ideas</a></h2>
   <p>
-  The core ideas behind Nodestrong are:
   <ul>
     <li>Be able to create a no-code trading strategy with a drag/drop UI.</li>
     <li>Be able to define who has access to the trading strategy, from most (individual user) to least (a community) granular level.</li>
@@ -123,9 +136,10 @@
   <li>Leaderboards where communities can see which member has the best trading strategy based on an evaluation of the triggers.</li>
  </ul>
 
- Given these base capabilities we can then derive various product offerings, which will be covered in the following sections.</p>
-  <h3>Nodestrong as a community frontend</h3>
-  <p>In this product offering, Nodestrong provides the end-to-end front and backend solution towards a community and their members. In pratise
+  Given these base capabilities we can then derive various product offerings, which will be covered in the following sections.</p>
+  <br><br>
+  <h3><a name="communityfrontend">Nodestrong as a community frontend</a></h3>
+  <p>In this product offering, Nodestrong provides the end-to-end front and backend solution towards a community and their members. In pratice
   it means that users goes through a Telegram or Discord channel in order to get access to the Nodestrong web-application and authentication happens
   towards the messaging app account. The web-app contains all the capabilities outlined above, from the strategy editor to the backtester and token
   live view. The community owners have the ability to control who has access to the app and which user type and capabilities each member has access to.
@@ -135,13 +149,13 @@
   Nodestrong platform allows the community owners to decide the way the use it.
 
 </p>
-  <h3>Nodestrong as a signal provider</h3>
+  <h3><a name="signalprovider">Nodestrong as a signal provider</a></h3>
   <p>The tech behind Nodestrong can be provided as a service to other frontends, who prefer to have their own custom look & feel and capabilities.
   A frontend in this case can for example be a Telegram bot a mobile app or a website. Nodestrong would in this case be a provider of signals to that frontend,
   and the project creators would use our tools to build and backtest their own trading strategies. For instance projects that provides a Telegram bot that
   sends token signals in a public or private channel, could be using Nodestrong behind the scenes, without it being visible to the end user.
-  <h3>Monetization</h3>
-  The business model is to provide a subscription service with tier levels. Example of features that can shape the various tier levels:
+  <h3><a name="monetization">Monetization</a></h3>
+  Nodestrong uses a tier levered subscription based service. Example of features that can shape the various tier levels:
   <ul>
     <li>Number of trading strategies per community.</li>
     <li>Number of trading strategies per community member.</li>
@@ -150,13 +164,18 @@
     <li>The maximum length of a backtest.</li>
     <li>Access to proven profitable trading strategies.</li>
   </ul>
+
+  Community owners can provide their own gate for their members to access. This could be token gates and/or any other means through which the community owners charges their users. 
+  Beyond that the idea is that Nodestrong provides a default payment gate that a community owner can use, against a fee on each user payment.
   </p>
 
   <br>
   <hr>
   <footer>
+    <br>
     Contact:
-    <a href="https://twitter.com/psueded">psuede</a>, <a href="">BigBuddy</a>, <a href="">Chris</a>, <a href="">happyplanethappyalex</a>
+    <a href="https://discord.com/users/554463644046327819">psuede</a>, <a href="">BigBuddy</a>, <a href="https://discord.com/users/835283116616450079">Chris</a>, <a href="">happyplanethappyalex</a>
+    <br>&nbsp;
   </footer>
 
   </body>
